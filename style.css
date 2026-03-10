@@ -1,21 +1,44 @@
-body { margin: 0; background: #000 !important; overflow: hidden; font-family: 'Inter', sans-serif; }
-#ui { position: absolute; width: 100%; text-align: center; top: 50%; transform: translateY(-50%); pointer-events: none; z-index: 10; }
-canvas { display: block; position: fixed; top: 0; left: 0; z-index: 1; }
+body { 
+  margin: 0; 
+  background: #000 !important; 
+  overflow: hidden; 
+  font-family: 'Inter', sans-serif; 
+}
+
+#ui { 
+  position: absolute; 
+  width: 100%; 
+  text-align: center; 
+  top: 50%; 
+  transform: translateY(-50%); 
+  pointer-events: none; 
+  z-index: 10; 
+}
 
 #brand-text {
   margin: 0; 
   font-weight: 400; 
   text-transform: uppercase; 
-  font-size: 1.3rem; 
-  letter-spacing: 1.2rem;
+  font-size: 2.6rem; 
+  letter-spacing: 1.8rem; 
   color: transparent;
   -webkit-background-clip: text; 
   background-clip: text;
+  
+  /* The Lantern Light */
   background-image: radial-gradient(
-    circle 600px at var(--lX) var(--lY), 
+    circle 500px at var(--lX, 50%) var(--lY, 50%), 
     rgba(255, 225, 180, 0.9) 0%,   
-    rgba(100, 80, 60, 0.4) 40%,    
-    rgba(30, 30, 30, 1) 100%       
+    rgba(100, 80, 60, 0.4) 45%,    
+    rgba(20, 20, 20, 1) 100%       
   );
   background-color: #1a1a1a; 
+}
+
+canvas { 
+  display: block; 
+  position: fixed; 
+  top: 0; 
+  left: 0; 
+  z-index: 1; 
 }
