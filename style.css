@@ -21,11 +21,10 @@ body {
   text-transform: uppercase; 
   font-size: 2.6rem; 
   letter-spacing: 1.8rem; 
+  padding-left: 1.8rem;
   color: transparent;
   -webkit-background-clip: text; 
   background-clip: text;
-  
-  /* The Lantern Light */
   background-image: radial-gradient(
     circle 500px at var(--lX, 50%) var(--lY, 50%), 
     rgba(255, 225, 180, 0.9) 0%,   
@@ -33,6 +32,21 @@ body {
     rgba(20, 20, 20, 1) 100%       
   );
   background-color: #1a1a1a; 
+}
+
+/* MOBILE OPTIMIZATION */
+@media (max-width: 768px) {
+  #brand-text {
+    font-size: 7vw; 
+    letter-spacing: 2.5vw;
+    padding-left: 2.5vw;
+    /* Faster gradient for mobile */
+    background-image: radial-gradient(
+      circle 300px at var(--lX, 50%) var(--lY, 50%), 
+      rgba(255, 225, 180, 0.9) 0%,   
+      rgba(20, 20, 20, 1) 100%
+    );
+  }
 }
 
 canvas { 
